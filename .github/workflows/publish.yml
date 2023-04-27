@@ -47,10 +47,9 @@ jobs:
         # This script must be removed because it uses
         # a devDependency and they doesn't exist in this context
         run: |
-          cd ./dist && npm set-script prepare "" && cd ..
+          cd ./dist && npm pkg delete scripts.prepare && cd ..
 
       - name: Publish to NPM
         run: |
+          npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_AUTH_TOKEN }}
           npm publish ./dist --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
