@@ -1,10 +1,14 @@
 {
-  "name": "serverless-package-ncc",
-  "version": "0.0.8",
+  "name": "@fye/serverless-package-ncc",
+  "version": "0.0.9",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
-  "author": "yxg10",
+  "contributors": [
+    "Techmmunity",
+    "yxg10",
+    "strumwolf"
+  ],
   "description": "Serverless Framework plugin to work with @vercel/ncc",
   "homepage": "https://github.com/yxg10/serverless-package-ncc#readme",
   "bugs": {
