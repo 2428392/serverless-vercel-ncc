@@ -16,8 +16,10 @@ export const writeZip = ({
 }: WriteParams) =>
   new Promise((resolve, reject) => {
     const zip = new JSZip();
-
-    zip.file(`${filePath}.js`, content);
+    zip.file(`${filePath}.js`, content, {
+      compression: "DEFLATE",
+      compressionOptions: { level: 9 },
+    });
 
     zip
       .generateNodeStream({ type: "nodebuffer", streamFiles: true })
