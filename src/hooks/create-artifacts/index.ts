@@ -11,6 +11,7 @@ import { getRootPath } from "utils/get-root-path";
 import { chunk } from "utils/chunk";
 
 export const createArtifacts = async (context: Context) => {
+  context.serverless.cli.log("running ncc");
   const functions = getAllNodeFunctions(context);
 
   const serverlessFolderPath = getRootPath(".serverless");

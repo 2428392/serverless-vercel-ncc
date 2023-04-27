@@ -81,10 +81,12 @@ export const compileAndZip = ({
 
   return Ncc(rootPath, {
     externals,
-    quiet: true,
+    debugLog: context.opt?.debugLog || false,
+    quiet: false,
     minify: context.opt?.minify,
     sourceMap: context.opt?.sourceMap,
     sourceMapRegister: context.opt?.sourceMapRegister,
+    cache: context.opt?.cache,
   }).then(({ code }) =>
     writeZip({
       filePath: path,

@@ -1,18 +1,19 @@
 declare module "@vercel/ncc" {
-	interface Options {
-		externals: Array<string>;
-		minify?: boolean;
-		sourceMap?: boolean;
-		sourceMapRegister?: boolean;
-		quiet?: boolean;
-	}
+  interface Options {
+    externals: Array<string>;
+    minify?: boolean;
+    sourceMap?: boolean;
+    sourceMapRegister?: boolean;
+    quiet?: boolean;
+    debugLog?: boolean;
+    cache?: boolean;
+  }
 
-	interface Output {
-		code: string;
-	}
+  interface Output {
+    code: string;
+  }
 
-	const compiler: (path: string, options: Options) => Promise<Output>;
+  const compiler: (path: string, options: Options) => Promise<Output>;
 
-	// eslint-disable-next-line import/no-default-export
-	export = compiler;
+  export = compiler;
 }

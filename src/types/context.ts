@@ -7,6 +7,8 @@ interface Options {
 	sourceMap?: boolean;
 	sourceMapRegister?: boolean;
 	dependenciesToExclude?: Array<string>;
+  debugLog?: boolean;
+  cache?: boolean;
 }
 
 export interface Context {
