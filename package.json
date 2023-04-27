@@ -10,13 +10,13 @@
     "strumwolf"
   ],
   "description": "Serverless Framework plugin to work with @vercel/ncc",
-  "homepage": "https://github.com/yxg10/serverless-package-ncc#readme",
+  "homepage": "https://github.com/2428392/serverless-package-ncc#readme",
   "bugs": {
-    "url": "https://github.com/yxg10/serverless-package-ncc/issues"
+    "url": "https://github.com/2428392/serverless-package-ncc/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yxg10/serverless-package-ncc.git"
+    "url": "git+https://github.com/2428392/serverless-package-ncc.git"
   },
   "keywords": [
     "serverless",

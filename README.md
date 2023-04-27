@@ -4,7 +4,7 @@
 
 # Techmmunity - Serverless Vercel Ncc
 
-<a href="https://github.com/techmmunity/eslint-config">
+<!-- <a href="https://github.com/techmmunity/eslint-config">
 	<img src="https://img.shields.io/badge/style%20guide-Techmmunity-01d2ce?style=for-the-badge" alt="Style Guide: Techmmunity">
 </a>
 <a href="https://www.codefactor.io/repository/github/techmmunity/serverless-vercel-ncc">
@@ -21,7 +21,7 @@
 </a>
 <a href="https://www.npmjs.com/package/serverless-vercel-ncc">
 	<img src="https://img.shields.io/npm/dw/serverless-vercel-ncc.svg?style=for-the-badge" alt="Downloads">
-</a>
+</a> -->
 
 <br>
 <br>
@@ -35,19 +35,22 @@ A serverless plugin to work with @vercel/ncc.
 With Yarn:
 
 ```sh
-yarn add serverless-package-ncc
+yarn add @fye/serverless-package-ncc
 ```
 
 With NPM:
 
 ```sh
-npm i serverless-package-ncc
+npm i @fye/serverless-package-ncc
 ```
 
 ## Usage
 
 ```yml
 # serverless.yml
+
+plugins:
+  - @fye/serverless-plugin-ncc
 
 custom:
   ncc:
@@ -59,6 +62,8 @@ custom:
     dependenciesToExclude: # Dependencies to exclude (if u want to exclude some extra
       - example-dependency # dependencies, or some dependencies that aren't at
       - example-dependency # package.json)
+    debugLog: false # @vercel/ncc option
+    cache: false # @vercel/ncc option
     # Extra @vercel/ncc options aren't accepted
 ```
 
